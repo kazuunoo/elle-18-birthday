@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f0e7">
+
+  <title>100 Reasons Why I Love You, Elle ♡</title>
+
+  <link rel="stylesheet" href="reasons.css">
+</head>
+
+<body>
+  <main class="reasons-page">
+
+    <a class="back-link" href="index.html">
+      ← back to your birthday
+    </a>
+
+    <header class="reasons-header">
+      <p class="eyebrow">a little something for you</p>
+
+      <h1>100 reasons<br>why I love you, Elle.</h1>
+
+      <p class="intro-note">
+        A hundred little things I adore about you.
+        Some you might already know, and some I hope
+        you'll remember whenever you need a reminder
+        of how loved you are.
+      </p>
+
+      <div class="counter-card">
+        <span class="counter-label">little letters opened</span>
+        <p class="counter-number">
+          <span id="opened-count">0</span>
+          <span class="counter-divider">/</span>
+          100
+        </p>
+        <p class="counter-note" id="counter-note">
+          take your time, birthday girl ♡
+        </p>
+      </div>
+    </header>
+
+    <section class="envelopes-section">
+      <div class="section-heading">
+        <span>♡</span>
+        <h2>pick a little letter</h2>
+        <span>♡</span>
+      </div>
+
+      <p class="section-note">
+        Each envelope holds one reason.
+        Tap any number to open it.
+      </p>
+
+      <div class="envelopes-grid" id="envelopes-grid">
+        <!-- The 100 envelopes will appear here. -->
+      </div>
+    </section>
+
+    <footer class="reasons-footer">
+      <p>made with so much love, just for you.</p>
+      <p>always, always. ♡</p>
+    </footer>
+
+  </main>
+
+  <div
+    class="letter-overlay"
+    id="letter-overlay"
+    aria-hidden="true"
+  >
+    <section
+      class="letter-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="letter-title"
+    >
+      <button
+        class="close-letter"
+        id="close-letter"
+        type="button"
+        aria-label="Close letter"
+      >
+        ×
+      </button>
+
+      <p class="letter-eyebrow" id="letter-number">
+        LETTER NO. 001
+      </p>
+
+      <div class="letter-decoration" aria-hidden="true">
+        ♡
+      </div>
+
+      <h2 id="letter-title">a little reason why...</h2>
+
+      <p class="letter-message" id="letter-message"></p>
+
+      <p class="letter-signoff">with love, always. ♡</p>
+
+      <button
+        class="letter-done"
+        id="letter-done"
+        type="button"
+      >
+        fold this letter ♡
+      </button>
+    </section>
+  </div>
+
+  <script src="reasons.js"></script>
+</body>
+</html>
