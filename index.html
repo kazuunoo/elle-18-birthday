@@ -1,50 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>happy birthday, elle ♡</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="description" content="A little birthday world made with love for Elle.">
+  <title>Happy 18th Birthday Elle<33</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <main class="birthday-page">
 
-    <main class="birthday-screen">
+    <div class="top-note">
+      <span class="tiny-star">✳</span>
+      MADE WITH LOVE, JUST FOR YOU
+      <span class="tiny-star">✳</span>
+    </div>
 
-        <div class="birthday-content">
+    <header class="intro">
+      <p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p>
 
-            <p class="eyebrow">
-                A LITTLE SOMETHING, JUST FOR YOU
-            </p>
+      <h1>happy 18th birthday,<br>
+        <span>elle ♡</span>
+      </h1>
 
-            <div class="heart-icon">♥</div>
+      <p class="intro-copy">
+        eighteen looks beautiful on you.<br>
+        today, this little world is all yours.
+      </p>
+    </header>
 
-            <h1>
-                happy birthday,<br>
-                <span>my elle ♡</span>
-            </h1>
+    <section class="birthday-scene" aria-label="Birthday cake and record player">
 
-            <div class="divider"></div>
+      <!-- Decorative orchids -->
+      <div class="orchid orchid-one" aria-hidden="true">
+        <span>✿</span><span>✿</span><span>✿</span>
+        <i>⌁</i>
+      </div>
 
-            <p class="description">
-                another year of you,<br>
-                and another reason to be grateful.
-            </p>
+      <div class="orchid orchid-two" aria-hidden="true">
+        <span>✿</span><span>✿</span><span>✿</span>
+        <i>⌁</i>
+      </div>
 
-            <button id="open-gift">
-                open your gift <span>↗</span>
-            </button>
+      <span class="floating-heart heart-one" aria-hidden="true">♡</span>
+      <span class="floating-heart heart-two" aria-hidden="true">✧</span>
+      <span class="floating-heart heart-three" aria-hidden="true">♡</span>
 
-            <p class="footer-note">
-                a little world made just for elle.
-            </p>
+      <!-- Birthday cake -->
+      <section class="cake-area">
+        <p class="object-label">MAKE A LITTLE WISH</p>
 
-        </div>
+        <button
+          class="cake-button"
+          id="candleButton"
+          type="button"
+          aria-label="Blow out the birthday candles"
+        >
+          <span class="cake-candles" aria-hidden="true">
+            <span class="candle candle-left">
+              <span class="flame"></span>
+            </span>
+            <span class="candle candle-middle">
+              <span class="flame"></span>
+            </span>
+            <span class="candle candle-right">
+              <span class="flame"></span>
+            </span>
+          </span>
 
-    </main>
+          <span class="cake">
+            <span class="cake-top">
+              <span class="icing-drip drip-one"></span>
+              <span class="icing-drip drip-two"></span>
+              <span class="icing-drip drip-three"></span>
+              <span class="icing-drip drip-four"></span>
+            </span>
+            <span class="cake-middle"></span>
+            <span class="cake-bottom"></span>
+            <span class="cake-plate"></span>
+          </span>
+        </button>
 
-    <script src="script.js"></script>
+        <p class="cake-hint" id="candleHint">
+          tap the candles to make a wish ♡
+        </p>
+        <p class="wish-message" id="wishMessage" hidden>
+          make a wish, birthday girl. ♡
+        </p>
+      </section>
+
+      <!-- Record player -->
+      <section class="record-area">
+        <p class="object-label">A SONG JUST FOR YOU</p>
+
+        <a
+          class="record-link"
+          id="spotifyLink"
+          href="https://open.spotify.com/track/7D0RhFcb3CrfPuTJ0obrod?si=yHlJPWkFQVKCgCAY8pLTEg&amp;utm_source=copy-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Elle's birthday song on Spotify"
+        >
+          <span class="turntable">
+            <span class="turntable-top">
+              <span class="vinyl" id="vinyl">
+                <span class="vinyl-groove groove-one"></span>
+                <span class="vinyl-groove groove-two"></span>
+                <span class="vinyl-groove groove-three"></span>
+                <span class="vinyl-label">
+                  <span>♡</span>
+                </span>
+              </span>
+
+              <span class="tonearm">
+                <span class="tonearm-joint"></span>
+                <span class="tonearm-stick"></span>
+                <span class="tonearm-head"></span>
+              </span>
+            </span>
+
+            <span class="turntable-front">
+              <span class="player-light"></span>
+              <span class="player-brand">for elle ♡</span>
+            </span>
+          </span>
+        </a>
+
+        <p class="record-hint">tap the record to hear your song ↗</p>
+      </section>
+    </section>
+
+    <div class="scene-divider">
+      <span></span> ❀ <span></span>
+    </div>
+
+    <section class="welcome-note">
+      <p class="note-kicker">A NOTE FOR YOU</p>
+      <p class="note-text">
+        if i could wrap up all the love i have for you,
+        i'd put it in a little box and give it to you today.
+        <br><br>
+        but since i can't, i made you this instead.
+      </p>
+      <span class="note-heart">with all my love, ♡</span>
+    </section>
+
+    <footer class="page-footer">
+      <span>18 YEARS OF YOU</span>
+      <span class="footer-heart">♥</span>
+      <span>A LITTLE WORLD BY ME</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
