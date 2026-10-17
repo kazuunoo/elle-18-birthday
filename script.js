@@ -35,3 +35,24 @@ const spotifyLink = document.getElementById("spotifyLink");
 spotifyLink.addEventListener("click", () => {
   spotifyLink.classList.add("playing");
 });
+
+/* POLAROID CAMERA INTERACTION */
+
+const polaroidButton = document.getElementById("polaroidButton");
+const polaroidPhoto = document.getElementById("polaroidPhoto");
+const polaroidHint = document.getElementById("polaroidHint");
+
+if (polaroidButton && polaroidPhoto && polaroidHint) {
+polaroidButton.addEventListener("click", () => {
+polaroidPhoto.classList.remove("printed");
+
+polaroidHint.textContent = "printing a little memory... ♡";
+
+window.setTimeout(() => {
+  polaroidPhoto.classList.add("printed");
+  polaroidHint.textContent =
+    "one little memory at a time ♡";
+}, 250);
+
+});
+}
