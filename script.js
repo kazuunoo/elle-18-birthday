@@ -42,17 +42,55 @@ const polaroidButton = document.getElementById("polaroidButton");
 const polaroidPhoto = document.getElementById("polaroidPhoto");
 const polaroidHint = document.getElementById("polaroidHint");
 
+const memoryPhotos = [
+  "photos/photo1.jpeg",
+  "photos/photo2.jpeg",
+  "photos/photo3.jpeg",
+  "photos/photo4.jpeg"
+];
+
+let currentPhoto = 0;
+
 if (polaroidButton && polaroidPhoto && polaroidHint) {
-polaroidButton.addEventListener("click", () => {
-polaroidPhoto.classList.remove("printed");
+  polaroidButton.addEventListener("click", () => {
+    const placeholder = polaroidPhoto.querySelector(".photo-placeholder");
+    const caption = polaroidPhoto.querySelector(".polaroid-caption");
 
-polaroidHint.textContent = "printing a little memory... ♡";
+    polaroidPhoto.classList.remove("printed");
+    polaroidHint.textContent = "printing your memory... ♡";
 
-window.setTimeout(() => {
-  polaroidPhoto.classList.add("printed");
-  polaroidHint.textContent =
-    "one little memory at a time ♡";
-}, 250);
+    window.setTimeout(() => {
+      if (placeholder) {
+        placeholder.style.display = "none";
+      }
 
-});
+      let photo = polaroidPhoto.querySelector(".memory-image");
+
+      if (!photo) {
+        photo = document.createElement("img");
+        photo.className = "memory-image";
+        photo.alt = "A little memory with Elle";
+        photo.style.width = "100%";
+        photo.style.aspectRatio = "1 / 1";
+        photo.style.objectFit = "cover";
+        photo.style.display = "block";
+
+        polaroidPhoto.insertBefore(photo, caption);
+      }
+
+      photo.onload = () => {
+        polaroidPhoto.classList.add("printed");
+        polaroidHint.textContent = "a little memory with you ♡";
+      };
+
+      photo.onerror = () => {
+        polaroidHint.textContent =
+          "oops! check the photo filename in GitHub ♡";
+      };
+
+      photo.src = memoryPhotos[currentPhoto];
+
+      currentPhoto = (currentPhoto + 1) % memoryPhotos.length;
+    }, 250);
+  });
 }
