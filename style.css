@@ -985,3 +985,42 @@ font-size: 12px;
 font-style: italic;
 color: #a58b91;
 }
+
+/* RECORD PLAYER + POLAROID LAYOUT */
+
+.memory-objects {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-start;
+gap: 24px;
+width: 100%;
+max-width: 650px;
+margin: 25px auto;
+}
+
+.memory-objects .record-area,
+.memory-objects .polaroid-area {
+flex: 1 1 240px;
+min-width: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.memory-objects .polaroid-camera {
+max-width: 100%;
+}
+
+@media (max-width: 520px) {
+.memory-objects {
+gap: 16px;
+}
+
+.memory-objects .record-area,
+.memory-objects .polaroid-area {
+flex: 1 1 140px;
+}
+
+.memory-objects .polaroid-camera {
+width: 160px;
+}
